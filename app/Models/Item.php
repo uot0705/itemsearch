@@ -18,7 +18,7 @@ class Item extends Model
 
     protected $fillable = [
 
-        'name','word','situation','merit','detail','user_id'//'image',
+        'name','word','situation','merit','detail','user_id','image'
 
         ];
 }

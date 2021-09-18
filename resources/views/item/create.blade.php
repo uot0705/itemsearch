@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.new-master')
 @section('content')
 <form method="post" action="{{ route('item.create') }}" enctype="multipart/form-data">
  @csrf
@@ -28,7 +28,7 @@
              <textarea class="" name="detail" cols="50" rows="10">{{ old('detail') }}</textarea>        
            </div>
         
-
+           <input type="file" name="image" accept="image/png, image/jpeg">
            <!--<div class="form-title">
            <label for="name">タイトル</label> 
              <input class="" name="name" value="{{ old('name') }}">

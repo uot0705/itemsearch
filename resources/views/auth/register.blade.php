@@ -1,7 +1,53 @@
+@extends('layouts.new-master')
+@section('content')
+<!DOCTYPE html>
+<html lang="ja">
+    
+<body id="page-top">
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">TOPページ</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">新規登録</h1>
+                <!-- Icon Divider-->
+                
+                <!-- Masthead Subheading-->
+               
+            </div>
+        </header>
+
+<section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    
+                    <div class="divider-custom-line"></div>
+                </div>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -9,24 +55,30 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <div class="form-floating mb-3">
+                <x-jet-input id="name" class="form-control" type="text" placeholder="Enter your name..." name="name" :value="old('name')" required autofocus autocomplete="name"  />
+                <label for="name">Nick name</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+
+            <div class="form-floating mb-3">
+                <x-jet-input id="email" class="form-control" type="email" placeholder="name@example.com" name="email" :value="old('email')" required />
+                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+            <div class="form-floating mb-3">
+                <x-jet-input id="password" class="form-control" type="password" placeholder="Enter your password..." name="password" required autocomplete="new-password" />
+                <label for="password">password</label>
+                <div class="invalid-feedback" data-sb-feedback="password:required">A phone number is required.</div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <div class="form-floating mb-3">
+                <x-jet-input id="password_confirmation" class="form-control" type="password" placeholder="Enter your password..." name="password_confirmation" required autocomplete="new-password" />
+                <label for="password_confirmation">password</label>
+                <div class="invalid-feedback" data-sb-feedback="password:required">A phone number is required.</div>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -51,10 +103,12 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
+                
+                <button class="ml-4" id="submitButton" type="submit">Send</button>
             </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+</section>
+</body>
+@endsection

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Item;
 use Auth;
 use Validator;
+use App\Image;
 
 class ItemController extends Controller
 {
@@ -35,14 +36,16 @@ class ItemController extends Controller
        //詳細
        $item->detail = $request->detail;
        //画像
-       //$item->image = $request->image;
+       $item->image = $request->image;
+         
        //登録ユーザーからidを取得
        $item->user_id = Auth::id();
        // インスタンスの状態をデータベースに書き込む
        $item->save();
        //「投稿する」をクリックしたら投稿情報表示ページへリダイレクト        
        return redirect()->route('item.detail', [
-           'id' => $item->id,
+           'item' => $item->id,
+           
        ]);
    }
 
@@ -51,10 +54,14 @@ class ItemController extends Controller
     */
     public function detail(Item $item)
     {
-        return view('item/detail', [
+        return view('show', [
             'name' => $item->name,
             'word' => $item->word,
-            'user_id' => $item->user_id,
+            'situation' => $item->situation,
+            'merit' => $item->merit,
+            'detail' => $item->detail,
+            'image' => $item->image,
+            'user_id' => $item->user_id
         ]);        
     }
 
