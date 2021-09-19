@@ -22,13 +22,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
+                   
                 </div>
             </div>
         </nav>
@@ -39,16 +33,17 @@
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">{{$name}}</h1>
-                        <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$45.00</span>
-                            <span>$40.00</span>
-                        </div>
-                        <p class="lead">{{$word}}</p>
-                        <p class="lead">{{$situation}}</p>
-                        <p class="lead">{{$merit}}</p>
-                        <p class="lead">{{$detail}}</p>
-                        <img class="logo" src="{{ asset('image/$image') }}" alt="logo">
+                        <h1 class="display-5 fw-bolder">{{$item->name}}</h1>
+                       <div class="fs-5 mb-5">
+                           <span class="text-decoration-line-through">$45.00</span>
+                           <span>$40.00</span>
+                       </div>
+                       <p class="lead">{{$item->word}}</p>
+                       <p class="lead">{{$item->situation}}</p>
+                       <p class="lead">{{$item->merit}}</p>
+                       <p class="lead">{{$item->detail}}</p>
+                        <img  src="{{ asset('storage/public/image/'.$item->image) }}">
+
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">

@@ -11,9 +11,11 @@ use App\Image;
 class ItemController extends Controller
 {
    
-    public function index()
+    public function index(Item $item)
    {
-       return view('index');
+    $items = Item::all();
+    $data = ['items' => $items];
+       return view('index', $data);
    }
     public function showCreateForm()
    {
@@ -23,6 +25,10 @@ class ItemController extends Controller
    public function create(Request $request)
    {
     
+    //画像保存
+    $image = $request->image->store('public/image');
+    $image = str_replace('public/image/', '', $image);
+
        // Postモデルのインスタンスを作成する
        $item = new Item();
        // 名前
@@ -36,7 +42,8 @@ class ItemController extends Controller
        //詳細
        $item->detail = $request->detail;
        //画像
-       $item->image = $request->image;
+       
+       $item->image = $image;
          
        //登録ユーザーからidを取得
        $item->user_id = Auth::id();
@@ -54,15 +61,7 @@ class ItemController extends Controller
     */
     public function detail(Item $item)
     {
-        return view('show', [
-            'name' => $item->name,
-            'word' => $item->word,
-            'situation' => $item->situation,
-            'merit' => $item->merit,
-            'detail' => $item->detail,
-            'image' => $item->image,
-            'user_id' => $item->user_id
-        ]);        
+        return view('show', compact('item'));        
     }
 
 }
