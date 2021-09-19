@@ -2,45 +2,7 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
-<body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Item Search</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                    @if (Route::has('login'))
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                          @auth    <!--ログイン中の場合-->
-                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">ダッシュボード</a>
-                          @else     <!--未ログインの場合-->
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">ログイン</a>
-                            @if (Route::has('register'))
-                              <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">アカウント作成</a>
-                            @endif
-                          @endif
-                        </div>
-                    @endif
-                     
-                    </form>
-                </div>
-            </div>
-        </nav>
-       
+<body>   
  <!-- Header-->
     <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">

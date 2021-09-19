@@ -16,3 +16,6 @@ Route::get('/item', [ItemController::class, 'showCreateForm'])->middleware(['aut
 Route::post('/item', [ItemController::class, 'create']);
 //投稿確認ページ
 Route::get('/item/{item}', [ItemController::class, 'detail'])->name('item.detail');
+Route::get('/item/{item_id}', [ItemController::class, 'show'])->name('item.show');
+Route::get('edit/{id}', [ItemController::class, 'edit'])->name('item.edit');
+Route::post('update/{id}', [ItemController::class, 'update'])->name('item.update');

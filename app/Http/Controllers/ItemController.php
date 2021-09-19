@@ -11,12 +11,51 @@ use App\Image;
 class ItemController extends Controller
 {
    
-    public function index(Item $item)
+    public function index(Request $request)
    {
-    $items = Item::all();
-    $data = ['items' => $items];
-       return view('index', $data);
+    $item = Item::all();
+    
+       return view('index', compact('item'));
    }
+
+   public function show(Request $request, int $item_id){
+    return view('show', ['id'=>$item_id]);
+}
+
+public function edit($id)
+  {
+    $item=Item::find($id);
+
+    return view('edit', compact('item'));
+  }
+
+  public function update(Request $request, $id)
+  {
+  
+    
+    $item=Item::find($id);
+    $item->name=$request->input('name');
+    $item->word=$request->input('word');
+    $item->situation=$request->input('situation');
+    $item->merit=$request->input('merit');
+    $item->detail=$request->input('detail');
+
+    $img = $request->image;
+    if( !is_null( $img ) ) {
+    $image = $img->store('public/image');
+    $image = str_replace('public/image/', '', $image);
+    $item->image = $image;
+    }
+
+    //DBに保存
+    $item->save();
+
+    //処理が終わったらmember/indexにリダイレクト
+    return redirect('/');
+}
+
+
+
     public function showCreateForm()
    {
        return view('item/create');
@@ -24,7 +63,6 @@ class ItemController extends Controller
 
    public function create(Request $request)
    {
-    
     //画像保存
     $image = $request->image->store('public/image');
     $image = str_replace('public/image/', '', $image);
@@ -61,7 +99,8 @@ class ItemController extends Controller
     */
     public function detail(Item $item)
     {
-        return view('show', compact('item'));        
+        return view('show', compact('item'));   
+        
     }
 
 }
