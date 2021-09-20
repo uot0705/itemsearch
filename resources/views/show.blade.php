@@ -36,6 +36,8 @@
                                 Add to cart
                             </button>
                             <a href="{{route('item.edit',['id'=>$item->id])}}">{{ __('編集') }}</a>
+                          
+                            </form>
                         </div>
                     </div>
                 </div>

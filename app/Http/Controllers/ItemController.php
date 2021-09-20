@@ -46,7 +46,7 @@ public function edit($id)
     $image = str_replace('public/image/', '', $image);
     $item->image = $image;
     }
-
+    
     //DBに保存
     $item->save();
 
@@ -82,7 +82,7 @@ public function edit($id)
        //画像
        
        $item->image = $image;
-         
+
        //登録ユーザーからidを取得
        $item->user_id = Auth::id();
        // インスタンスの状態をデータベースに書き込む
