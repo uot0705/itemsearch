@@ -36,7 +36,7 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                           @auth    <!--ログイン中の場合-->
-                            <a href="{{ url('/dashboard') }}" >ダッシュボード</a>
+                            <a href="{{ route('my.page')}}">マイページ</a>
                             <a href="{{ route('item.create')}}">アイテム投稿</a>
                           @else     <!--未ログインの場合-->
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">ログイン</a>
@@ -58,9 +58,8 @@
          <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
         </footer> 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
 </html>

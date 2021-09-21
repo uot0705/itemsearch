@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
+
 Route::get('/', [ItemController::class, 'index']);
 
 //新規登録//
@@ -20,3 +21,7 @@ Route::get('/item/{item_id}', [ItemController::class, 'show'])->name('item.show'
 Route::get('edit/{id}', [ItemController::class, 'edit'])->name('item.edit');
 Route::post('update/{id}', [ItemController::class, 'update'])->name('item.update');
 Route::post('destroy/{id}', [ItemController::class, 'destroy'])->name('item.destroy');
+
+Route::get('/my.page', [UserController::class, 'index'])->name('my.page');
+Route::get('/my.page/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::post('user/edit', [UserController::class, 'update'])->name('user.update');

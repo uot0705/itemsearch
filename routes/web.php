@@ -19,3 +19,4 @@ Route::get('/item/{item}', [ItemController::class, 'detail'])->name('item.detail
 Route::get('/item/{item_id}', [ItemController::class, 'show'])->name('item.show');
 Route::get('edit/{id}', [ItemController::class, 'edit'])->name('item.edit');
 Route::post('update/{id}', [ItemController::class, 'update'])->name('item.update');
+Route::get('/my.page', [ItemController::class, 'user'])->name('my.page');

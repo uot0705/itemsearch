@@ -26,7 +26,7 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                    <form method="POST" action="{{route('item.update',['id' =>$item->id])}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('item.update',['id' =>$item->id])}}" enctype="multipart/form-data">
                   
                     @csrf
                <div class="form">

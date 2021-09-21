@@ -10,7 +10,7 @@ use App\Image;
 
 class ItemController extends Controller
 {
-   
+//トップページ
     public function index(Request $request)
    {
     $item = Item::all();
@@ -18,17 +18,22 @@ class ItemController extends Controller
        return view('index', compact('item'));
    }
 
-   public function show(Request $request, int $item_id){
+
+
+//アイテム詳細
+public function show(Request $request, int $item_id){
     return view('show', ['id'=>$item_id]);
 }
 
+//アイテム編集
 public function edit($id)
   {
     $item=Item::find($id);
 
-    return view('edit', compact('item'));
+    return view('item/edit', compact('item'));
   }
 
+//アイテムアップデート
   public function update(Request $request, $id)
   {
   
@@ -54,6 +59,7 @@ public function edit($id)
     return redirect('/');
 }
 
+//アイテム削除
 public function destroy($id)
   {
     $item=Item::find($id);
@@ -64,7 +70,7 @@ public function destroy($id)
   }
 
 
-
+//アイテム作成
     public function showCreateForm()
    {
        return view('item/create');
@@ -111,5 +117,8 @@ public function destroy($id)
         return view('show', compact('item'));   
         
     }
+
+
+ 
 
 }

@@ -39,6 +39,8 @@
                             <form method="POST" action="{{route('item.destroy',['id'=>$item->id])}}">
                             @csrf
                             <button type="submit">削除</button>
+                    　　　　　</form>
+                    
                         </div>
                     </div>
                 </div>
@@ -151,9 +153,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
-        </footer>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
