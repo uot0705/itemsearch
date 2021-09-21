@@ -4,13 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Models\User;
 use Auth;
 use Validator;
 use App\Image;
 
 class UserController extends Controller
 {
-    //下記を追加
+  public function show(User $user,$id)
+  {
+      $user = User::find($id); //idが、リクエストされた$userのidと一致するuserを取得
+      $item = Item::where('user_id', $id) //$userによる投稿を取得
+          ->orderBy('created_at', 'desc') // 投稿作成日が新しい順に並べる
+          ->paginate(10); // ページネーション; 
+      return view('user/show', [
+          'user_name' => $user->name, // $user名をviewへ渡す
+          'item' => $item, // $userの書いた記事をviewへ渡す
+      ]);
+  }
 
     //userデータの取得
     public function index() {
@@ -32,4 +43,7 @@ class UserController extends Controller
         //リダイレクト
         return view('user/user', ['user' => Auth::user() ]);
     }
+
+    
+
   }

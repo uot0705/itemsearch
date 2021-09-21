@@ -6,7 +6,7 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">アイテム投稿一覧</h1>
+                    <h1 class="display-4 fw-bolder">{{ $user_name }} さんの投稿</h1>
                     <p class="lead fw-normal text-white-50 mb-0"></p>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ route('item.show', ['item_id'=>$item->id]) ,}}">詳細</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ route('item.show', ['item_id'=>$item->id]) }}">詳細</a></div>
                             </div>
                             
                         </div>

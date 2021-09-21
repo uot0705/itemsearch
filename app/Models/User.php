@@ -16,7 +16,7 @@ class User extends Authenticatable
    //アソシエーション
     public function items()
     {
-        return $this->hasOne(Item::class);
+        return $this->hasMany(Item::class);
     }
 
     use HasApiTokens;

@@ -84,6 +84,7 @@
                                     this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
+                    <a href="{{ route('user.show', ['id'=>$user->id])}}">投稿一覧</a>
                 </form>
             </div>
         </div>

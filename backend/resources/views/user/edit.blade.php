@@ -22,6 +22,8 @@
               <div>
                 <input type="text" name="email" class="form-control" value="{{ $user->email }}">
               </div>
+              <div class="form-group">
+              
               <button type="submit" class="user-btn">変更</button>
               {{ csrf_field() }}
           </form>

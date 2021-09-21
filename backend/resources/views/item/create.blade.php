@@ -14,20 +14,14 @@
 
     <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-                    </div>
-                </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
      <form method="post" action="{{ route('item.create') }}" enctype="multipart/form-data">
                   
                     @csrf
         <div class="form">
-            <div class="form-floating mb-3">
+            
+            <div class="form-floating mb-3 mt-5">
              <input class="form-control" placeholder="Enter your name..." name="name" value="{{ old('name') }}">
              <label for="name">タイトル</label>
            　</div>
