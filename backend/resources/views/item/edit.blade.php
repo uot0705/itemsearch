@@ -2,9 +2,6 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
-<body>
-
-       
  <!-- Header-->
     <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -15,10 +12,10 @@
             </div>
     </header>
 
-    <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5 ">
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
+  <section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5 ">
+      <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        <div class="col-lg-6">
         <form method="POST" action="{{route('item.update',['id' =>$item->id])}}" enctype="multipart/form-data">
                   
                     @csrf
@@ -52,21 +49,14 @@
            <div class="form-floating mb-3">
            <input class="form-control" type="file" name="image" accept="image/png, image/jpeg" value="{{$item->image}}">
            </div>
-           <!--<div class="form-title">
-           <label for="name">タイトル</label> 
-             <input class="" name="name" value="{{ old('name') }}">
-           </div>-->
-
           
-
            <div class="form-submit">
-             <button type="submit">編集する</button>
+             <button class="btn btn-primary btn-xl" type="submit">編集する</button>
            </div>
        </div>
-</form>
-                    </div>
-                </div>
-               
-            </div>
-        </section>
+     </form>
+        </div>
+      </div>
+    </div>
+  </section>
 @endsection

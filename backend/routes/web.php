@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
 
-Route::get('/', [ItemController::class, 'index']);
+Route::get('/', [ItemController::class, 'index'])->name('item.index');
+//検索結果
+Route::get('/item/search', [ItemController::class, 'search'])->name('item.search');
 
 //未ログインでも閲覧可能
 //新規登録//
@@ -33,6 +35,7 @@ Route::post('destroy/{id}', [ItemController::class, 'destroy'])->name('item.dest
 Route::get('/my.page', [UserController::class, 'index'])->name('my.page');
 Route::get('/my.page/edit', [UserController::class, 'edit'])->name('user.edit');
 Route::post('user/edit', [UserController::class, 'update'])->name('user.update');
+Route::post('/user/{user}/delete', [UserController::class, 'softDeleteUser'])->name('user_delete');
 });
 
 

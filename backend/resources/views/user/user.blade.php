@@ -73,19 +73,129 @@
             </div>
 
             <div class="mt-3 space-y-1">
-            <a href="{{ route('user.edit')}}">ユーザー情報編集</a>
+        
+        <!--プロフィールコンテンツ-->
+        <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <!--編集-->
+            <div class="col mb-5">
+                        <div class="card h-100">
+                          <!-- name-->
+                        <h5 class="fw-bolder"></h5>
+                            <!-- Product image-->
+                           
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- 一言-->
+                                    <h5 class="fw-bolder"></h5>
+                                    <!-- 詳細-->
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"> <a class="btn btn-outline-dark mt-auto" href="{{ route('user.edit')}}">ユーザー情報編集</a></div>
+                            </div>
+                            
+                        </div>
+             </div>
 
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
+             <!--投稿一覧-->
+            <div class="col mb-5">
+                        <div class="card h-100">
+                          <!-- name-->
+                        <h5 class="fw-bolder"></h5>
+                            <!-- Product image-->
+                           
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- 一言-->
+                                    <h5 class="fw-bolder"></h5>
+                                    <!-- 詳細-->
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"> <a class="btn btn-outline-dark mt-auto" href="{{ route('user.show', ['id'=>$user->id])}}">投稿一覧</a></div>
+                            </div>
+                            
+                        </div>
+             </div>
+           
+              <!--ログアウト-->
+            <div class="col mb-5">
+                        <div class="card h-100">
+                          <!-- name-->
+                        <h5 class="fw-bolder"></h5>
+                            <!-- Product image-->
+                           
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- 一言-->
+                                    <h5 class="fw-bolder"></h5>
+                                    <!-- 詳細-->
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">    
+                                <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                    <x-jet-responsive-nav-link class="btn btn-outline-dark mt-auto" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
-                    <a href="{{ route('user.show', ['id'=>$user->id])}}">投稿一覧</a>
                 </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+             </div>
+
+            <!--退会-->
+            <div class="col mb-5">
+                        <div class="card h-100">
+                          <!-- name-->
+                        <h5 class="fw-bolder"></h5>
+                            <!-- Product image-->
+                           
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- 一言-->
+                                    <h5 class="fw-bolder"></h5>
+                                    <!-- 詳細-->
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"> 
+                                     @if(session('say'))　　　
+                                        <div class="alert alert-success" role="alert">
+                                                {{ session('say') }}
+                                        </div>
+                                    @endif
+
+                                    @if(Auth::check() && Auth::id() == $user->id) 
+                                        <form method="post" action="{{ route('user_delete', ['user' => Auth::id()]) }}">
+                                            {{ csrf_field() }}
+                                            <input type="submit" value="退会" class="btn btn-outline-dark mt-auto" onclick='return confirm("本当に退会しますか？");'>
+                                        </form>
+                                    @endif
+                                </div>
+                            </div>
+                            
+                        </div>
+             </div>
+        　</div>
+       　 </div>
+                   
+
+                
             </div>
         </div>
     </div>

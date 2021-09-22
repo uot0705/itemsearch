@@ -48,15 +48,9 @@
            <div class="form-floating mb-3">
            <input class="form-control" type="file" name="image" accept="image/png, image/jpeg">
            </div>
-           <!--<div class="form-title">
-           <label for="name">タイトル</label> 
-             <input class="" name="name" value="{{ old('name') }}">
-           </div>-->
-
-          
-
+        
            <div class="form-submit">
-             <button type="submit">投稿する</button>
+             <button class="btn btn-primary btn-xl" type="submit">投稿する</button>
            </div>
        </div>
 　　　　</form>

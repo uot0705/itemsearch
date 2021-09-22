@@ -1,5 +1,6 @@
 @extends('layouts.new-master')
 @section('content')
+<?php $user = Auth::user(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -88,13 +89,17 @@
                        
 
                         <div class="d-flex">
-                            
+                        　@if (Auth::check()) 
+                               @if  ($user->id == $item->user_id)
                             <a class="btn btn-primary btn-xl" href="{{route('item.edit',['id'=>$item->id])}}">{{ __('編集') }}</a>
                             <form method="POST" action="{{route('item.destroy',['id'=>$item->id])}}">
                             @csrf
                             <button class="btn btn-secondary btn-xl ml-3" type="submit">削除</button>
                     　　　　　</form>
-                    
+                               @endif
+                               @else
+
+                           @endif
                         </div>
                     </div>
                 </div>

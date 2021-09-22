@@ -17,7 +17,23 @@
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/">Item Search</a>
-                
+                 <!-- 検索-->
+        <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('item.search') }}">
+            <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-info my-2" type="submit">検索</button>
+                <button class="btn btn-secondary my-2 ml-5">
+                    <a href="{{ route('item.search') }}" class="text-white">
+                        クリア
+                    </a>
+                </button>
+            </div>
+        </form>
+
+ 
+
+            
+            <!-- 検索終了-->
                     <form class="d-flex">
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -40,7 +56,8 @@
     <body>
        <div>
        @yield('content')
-         <div>
+      </div>
+      
          <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
         </footer> 

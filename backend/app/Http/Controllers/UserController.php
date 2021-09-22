@@ -44,6 +44,15 @@ class UserController extends Controller
         return view('user/user', ['user' => Auth::user() ]);
     }
 
-    
+    public function softDeleteUser(User $user) 
+{
+  if(Auth::check() && Auth::id() == $user->id ) {
+      $user->delete();
+       return redirect()->route('item.index')->with('say', '退会処理が完了しました');
+   } else {
+      return redirect()->route('my_page', ['user' => Auth::id()])->with('say', '何らかの理由で退会処理が出来ませんでした、取引中の商品などを確認してください。');
+   }
+   
+}
 
   }
