@@ -14,7 +14,7 @@
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
           <!-- Navigation-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/">Item Search</a>
                  <!-- 検索-->
@@ -22,7 +22,7 @@
             <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div class="d-flex justify-content-center">
                 <button class="btn btn-info my-2" type="submit">検索</button>
-                <button class="btn btn-secondary my-2 ml-5">
+                <button class="btn btn-secondary my-2 ">
                     <a href="{{ route('item.search') }}" class="text-white">
                         クリア
                     </a>
@@ -41,9 +41,9 @@
                             <a class="dropdown-item" href="{{ route('my.page')}}">マイページ</a>
                             <a class="dropdown-item" href="{{ route('item.create')}}">アイテム投稿</a>
                           @else     <!--未ログインの場合-->
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">ログイン</a>
+                            <a class="dropdown-item" href="{{ route('login') }}" class="text-sm text-gray-700 underline">ログイン</a>
                             @if (Route::has('register'))
-                              <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">アカウント作成</a>
+                              <a class="dropdown-item" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">アカウント作成</a>
                             @endif
                           @endif
                         </div>
