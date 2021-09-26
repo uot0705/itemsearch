@@ -13,20 +13,10 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-
-    use MustVerifyEmail, Notifiable, SoftDeletes;
-   
-    protected $dates = ['deleted_at']; 
-
-    use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
-
-protected $softCascade = ['item']; 
-
-
    //アソシエーション
     public function items()
     {
-        return $this->hasMany(Item::class);
+        return $this->hasOne(Item::class);
     }
 
     use HasApiTokens;
