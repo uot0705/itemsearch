@@ -1,64 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# ◇アプリ名
+Item Search
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# ◇概要
+・便利な魅力的なアイテム・ガジェットと見つかります。<br>
+・様々な人の便利な使い方を知れます。<br>
+・ユーザー登録ができます。<br>
+・オススメのアイテム・ガジェットを紹介できます。<br>
 
-## About Laravel
+# ◇本番環境						
+□URL<br>
+http://3.113.185.168/<br>
+□ID/Pass<br>
+ID: uot0705<br>
+Pass: 7777<br>
+□テスト用アカウント<br>
+メールアドレス: sabusukunokanri.demoaka@gmail.com<br>
+パスワード: demo1234<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# ◇制作背景
+便利で魅力的なアイテム・ガジェットを知れます。<br>
+現在世の中には様々な数え切れない程の、便利なアイテムがあります。<br>
+その為、自分に合うアイテムを見つけること、知ることは難しいです。<br>
+そこでItem Searchを作成しました<br>
+Item Searchでは商品の「画像とオススメポイント」が一覧になっており、気になるアイテムをすぐ見つけられます<br>
+アイテムの詳細にはいると、商品の「魅力や利用シーン」が紹介されています。<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+						
+# ◇DEMO
+## トップページ
+[![Image from Gyazo](https://i.gyazo.com/6190b8695139c4a6305881b1bb7462e1.gif)](https://gyazo.com/6190b8695139c4a6305881b1bb7462e1)
+## ユーザー新規登録
+[![Image from Gyazo](https://i.gyazo.com/69a15091d097a937cadcf74ded2b3e1e.png)](https://gyazo.com/69a15091d097a937cadcf74ded2b3e1e)
+## ユーザーページ
+[![Image from Gyazo](https://i.gyazo.com/0fac265dd149084f75805663500ac564.gif)](https://gyazo.com/0fac265dd149084f75805663500ac564)
+## ユーザーページ（メモ機能）
+[![Image from Gyazo](https://i.gyazo.com/fb28cbf6e8c52a36957b6873ca305696.gif)](https://gyazo.com/fb28cbf6e8c52a36957b6873ca305696)
+## サブスク登録
+[![Image from Gyazo](https://i.gyazo.com/de2cdd7246cefe25befe02e7447cb6f9.gif)](https://gyazo.com/de2cdd7246cefe25befe02e7447cb6f9)
+## 【メール】新規登録・お知らせ
+□新規登録
+[![Image from Gyazo](https://i.gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0.png)](https://gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0)
+□お知らせ
+[![Image from Gyazo](https://i.gyazo.com/5a0f5726629eff0d524ccfcca095d38e.png)](https://gyazo.com/5a0f5726629eff0d524ccfcca095d38e)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# ◇工夫したポイント
+①ユーザーが、視覚的にすぐに気になる情報（画像と商品のオススメポイント）を一覧にしました。<br>
+`②シンプルなデザイン`<br>
+シンプルにすることで、機能的にユーザーが迷うことなく使用できるようにしました。<br> 
 
-## Learning Laravel
+（その他）<br>
+・アイテム検索機能<br>
+・ユーザーごとの投稿一覧表示<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# ◇使用技術
+□開発環境<br>
+PHP/Laravel/JavaScript/docker(Laradock)/Github/AWS/Visual Studio Code<br>
+□開発期間と平均作業時間<br>
+・開発期間：9/16〜9/29(13日間)<br>
+・1日あたりの平均作業時間：10時間<br>
+合計：130時間程度<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# ◇課題や今後実装したい機能						
+・写真複数枚の投稿<br>
+アイテムの利用イメージ向上<br>
 
-## Laravel Sponsors
+# ◇DB設計												
+## usersテーブル
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false, unique: true |
+| password           | string | null: false |
+| name               | string | null: false |
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+### Association
+- has_many :items
 
-## Contributing
+## itemsテーブル
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Column               | Type       | Options                        |
+| ---------------------| ---------- | ------------------------------ |
+| name                 | string     | null: false                    |
+| word                 | string     | null: false                    |
+| situation            | integer    | null: false                    |
+| merit                | string     | null: false                    |
+| detail               | text       | null: false                    |
+| image                | string     | null: false                    |
+| user                 | references | null: false, foreign_key:true  |
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Association
+- belongs_to :user
