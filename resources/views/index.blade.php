@@ -2,6 +2,11 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
+<head>
+<link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
+<link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
+<link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+</head>
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">

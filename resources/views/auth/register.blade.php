@@ -86,7 +86,7 @@
                 </a>
 
                 
-                <button class="ml-4" id="submitButton" type="submit">Send</button>
+                <button class="btn btn-info my-2" id="submitButton" type="submit">登録</button>
             </div>
         </form>
     </x-jet-authentication-card>

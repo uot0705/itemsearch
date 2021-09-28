@@ -70,9 +70,10 @@
                 </a>
 
                 
-                <x-jet-button class="ml-4">
-        {{ __('Log in') }}
+                <x-jet-button class="btn btn-info my-2">
+        {{ __('ログイン') }}
     </x-jet-button>
+    
             </div>
         </form>
     </x-jet-authentication-card>
