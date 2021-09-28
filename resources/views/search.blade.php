@@ -28,7 +28,7 @@
                           <!-- name-->
                         <h5 class="fw-bolder">{{ $item->name }}</h5>
                             <!-- Product image-->
-                            <img  src="{{ asset('storage/app/public//public/image/'.$item->image)}}">
+                            <img  src="{{ asset('storage/image/'.$item->image)}}">
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
