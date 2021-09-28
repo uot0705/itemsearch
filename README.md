@@ -10,9 +10,6 @@ Item Search
 # ◇本番環境						
 □URL<br>
 http://3.113.185.168/<br>
-□ID/Pass<br>
-ID: uot0705<br>
-Pass: 7777<br>
 □テスト用アカウント<br>
 メールアドレス: sabusukunokanri.demoaka@gmail.com<br>
 パスワード: demo1234<br>
@@ -27,21 +24,16 @@ Item Searchでは商品の「画像とオススメポイント」が一覧にな
 
 						
 # ◇DEMO
-## トップページ
-[![Image from Gyazo](https://i.gyazo.com/6190b8695139c4a6305881b1bb7462e1.gif)](https://gyazo.com/6190b8695139c4a6305881b1bb7462e1)
-## ユーザー新規登録
-[![Image from Gyazo](https://i.gyazo.com/69a15091d097a937cadcf74ded2b3e1e.png)](https://gyazo.com/69a15091d097a937cadcf74ded2b3e1e)
-## ユーザーページ
-[![Image from Gyazo](https://i.gyazo.com/0fac265dd149084f75805663500ac564.gif)](https://gyazo.com/0fac265dd149084f75805663500ac564)
-## ユーザーページ（メモ機能）
-[![Image from Gyazo](https://i.gyazo.com/fb28cbf6e8c52a36957b6873ca305696.gif)](https://gyazo.com/fb28cbf6e8c52a36957b6873ca305696)
-## サブスク登録
-[![Image from Gyazo](https://i.gyazo.com/de2cdd7246cefe25befe02e7447cb6f9.gif)](https://gyazo.com/de2cdd7246cefe25befe02e7447cb6f9)
-## 【メール】新規登録・お知らせ
-□新規登録
-[![Image from Gyazo](https://i.gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0.png)](https://gyazo.com/c71a29fb4d407bf2c2c47a9fb7aa2ef0)
-□お知らせ
-[![Image from Gyazo](https://i.gyazo.com/5a0f5726629eff0d524ccfcca095d38e.png)](https://gyazo.com/5a0f5726629eff0d524ccfcca095d38e)
+## トップページ→アイテム詳細画面
+[![Image from Gyazo](https://i.gyazo.com/d80f07da742c234df316d57abfb400ad.gif)](https://gyazo.com/d80f07da742c234df316d57abfb400ad)
+## アイテム詳細画面
+[![Image from Gyazo](https://i.gyazo.com/ebded24a8dfd27d14772d220bb56d3f9.jpg)](https://gyazo.com/ebded24a8dfd27d14772d220bb56d3f9)
+## 詳細画面→ユーザー投稿一覧
+[![Image from Gyazo](https://i.gyazo.com/86062241ff7b63d36a32c558603361b6.gif)](https://gyazo.com/86062241ff7b63d36a32c558603361b6)
+## 検索機能
+[![Image from Gyazo](https://i.gyazo.com/af94fb49c4a677930ea84c4a1b88483d.gif)](https://gyazo.com/af94fb49c4a677930ea84c4a1b88483d)
+## マイページ
+[![Image from Gyazo](https://i.gyazo.com/b43273904c28ae0c03bdd54c083e9b28.png)](https://gyazo.com/b43273904c28ae0c03bdd54c083e9b28)
 
 # ◇工夫したポイント
 ①ユーザーが、視覚的にすぐに気になる情報（画像と商品のオススメポイント）を一覧にしました。<br>
@@ -56,9 +48,9 @@ Item Searchでは商品の「画像とオススメポイント」が一覧にな
 □開発環境<br>
 PHP/Laravel/JavaScript/docker(Laradock)/Github/AWS/Visual Studio Code<br>
 □開発期間と平均作業時間<br>
-・開発期間：9/16〜9/29(13日間)<br>
+・開発期間：9/16〜9/28(12日間)<br>
 ・1日あたりの平均作業時間：10時間<br>
-合計：130時間程度<br>
+合計：120時間程度<br>
 
 # ◇課題や今後実装したい機能						
 ・写真複数枚の投稿<br>
