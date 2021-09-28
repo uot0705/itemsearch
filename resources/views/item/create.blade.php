@@ -33,7 +33,7 @@
 
            <div class="form-floating mb-3">
              <input class="form-control" placeholder="Enter your name..." name="word" value="{{ old('word') }}">
-             <label for="word">　この商品一言で言うなら</label> 
+             <label for="word">この商品一言で言うなら</label> 
            </div>
 
            <div class="form-floating mb-3">
