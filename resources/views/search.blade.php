@@ -26,7 +26,7 @@
                      <div class="col mb-5">
                         <div class="card h-100">
                           <!-- name-->
-                        <h5 class="fw-bolder">{{ $item->name }}</h5>
+                          <h5 class="fw-bolder text-center py-2 mb-0 bg-secondary text-white">{{ $item->name }}</h5>
                             <!-- Product image-->
                             <img  src="{{ asset('storage/image/'.$item->image)}}">
                             <!-- Product details-->
