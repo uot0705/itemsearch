@@ -28,17 +28,17 @@
             
             <div class="form-floating mb-3 mt-5">
              <input class="form-control" placeholder="Enter your name..." name="name" value="{{ old('name') }}">
-             <label for="name">タイトル</label>
+             <label for="name">アイテム名</label>
            　</div>
 
            <div class="form-floating mb-3">
              <input class="form-control" placeholder="Enter your name..." name="word" value="{{ old('word') }}">
-             <label for="word">　一言</label> 
+             <label for="word">　この商品一言で言うなら</label> 
            </div>
 
            <div class="form-floating mb-3">
              <input class="form-control" placeholder="Enter your name..." name="situation" value="{{ old('situation') }}">
-             <label for="situation">シチュエーション</label> 
+             <label for="situation">利用シーン</label> 
            </div>
 
            <div class="form-floating mb-3">
@@ -48,14 +48,14 @@
 
            <div class="form-floating mb-3">
              <textarea class="form-control" style="height: 10rem"　placeholder="Enter your name..." name="detail" cols="50" rows="10">{{ old('detail') }}</textarea>  
-             <label for="detail" class="form-content">詳細</label>       
+             <label for="detail" class="form-content">詳細(その他・公式サイトなど)</label>       
            </div>
            <div class="form-floating mb-3">
            <input class="form-control" type="file" name="image" accept="image/png, image/jpeg">
            </div>
         
            <div class="form-submit">
-             <button class="btn btn-primary btn-xl" type="submit">投稿する</button>
+             <button class="btn btn-primary btn-xl" type="submit">投稿</button>
            </div>
        </div>
 　　　　</form>
