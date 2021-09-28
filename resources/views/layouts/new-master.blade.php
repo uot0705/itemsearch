@@ -11,7 +11,9 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
+<link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
+<link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -22,8 +24,8 @@
             <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div class="d-flex justify-content-center">
                 <button class="btn btn-info my-2" type="submit">検索</button>
-                <button class="btn btn-secondary my-2 ">
-                    <a href="{{ route('item.search') }}" class="text-white">
+                <button class="btn btn-secondary my-2 ml-3">
+                    <a href="{{ route('item.search') }}" class="text-decoration-none text-white">
                         クリア
                     </a>
                 </button>

@@ -22,7 +22,7 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"> <img width="100%" height="50%" src="{{ asset('storage/public/image/'.$item->image) }}"></div>
+                    <div class="col-md-6"> <img width="100%" height="50%" src="{{ asset('storage/image/'.$item->image) }}"></div>
                     <div class="col-md-6">
                         <div class="small mb-1">
                         投稿者: <a href="{{ route('user.show', ['id'=>$item->user_id])}}">{{ $item->user->name }}</a>
