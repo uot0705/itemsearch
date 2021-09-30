@@ -18,6 +18,24 @@
           <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/">Item Search</a>
+
+                <form class="d-flex">
+                    @if (Route::has('login'))
+                        <div class="hidden fixed top-0 right-0 px-6 py-4 d-block d-md-none">
+                          @auth    <!--ログイン中の場合-->
+                            <a class="dropdown-item" href="{{ route('my.page')}}">マイページ</a>
+                            <a class="dropdown-item" href="{{ route('item.create')}}">アイテム投稿</a>
+                          @else     <!--未ログインの場合-->
+                            <a class="dropdown-item" href="{{ route('login') }}" class="text-sm text-gray-700 underline">ログイン</a>
+                            @if (Route::has('register'))
+                              <a class="dropdown-item" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">アカウント作成</a>
+                            @endif
+                          @endif
+                        </div>
+                    @endif
+                        
+                    </form>
+                    
                  <!-- 検索-->
                     <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('item.search') }}">
                         <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
