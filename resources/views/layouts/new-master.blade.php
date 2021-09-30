@@ -34,7 +34,7 @@
             <!-- 検索終了-->
                     <form class="d-flex">
                     @if (Route::has('login'))
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                        <div class="hidden fixed top-0 right-0 px-6 py-4 d-none d-md-block">
                           @auth    <!--ログイン中の場合-->
                             <a class="dropdown-item" href="{{ route('my.page')}}">マイページ</a>
                             <a class="dropdown-item" href="{{ route('item.create')}}">アイテム投稿</a>
