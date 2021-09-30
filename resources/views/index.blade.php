@@ -18,7 +18,7 @@
         </header>
         <!-- Section-->
         <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
+            <div class="container px-4 px-lg-5 mt-2">
                           <!-- 検索-->
                           <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('item.search') }}">
                         <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
