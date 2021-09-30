@@ -36,7 +36,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
            
                 @foreach ($item as $item)
-                     <div class="col mb-5">
+                     <div class="col mb-5  mt-2">
                         <div class="card h-100">
                           <!-- name-->
                         <h5 class="fw-bolder text-center py-2 mb-0 bg-secondary text-white">{{ $item->name }}</h5>
