@@ -18,8 +18,9 @@
         </header>
         <!-- Section-->
         <section class="py-5">
-                     <!-- 検索-->
-                     <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('item.search') }}">
+            <div class="container px-4 px-lg-5 mt-5">
+                          <!-- 検索-->
+                          <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('item.search') }}">
                         <input class="form-control my-2 mr-5" type="search" placeholder="アイテム名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-info my-2" type="submit">検索</button>
@@ -32,7 +33,6 @@
                     </form>
 
             <!-- 検索終了-->
-            <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
            
                 @foreach ($item as $item)
