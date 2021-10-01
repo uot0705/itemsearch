@@ -41,9 +41,7 @@
        @yield('content')
       </div>
       
-         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">@Item Search</p></div>
-        </footer> 
+         
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

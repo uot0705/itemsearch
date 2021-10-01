@@ -1,4 +1,5 @@
 @extends('layouts.new-master')
+@extends('fotter')
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
