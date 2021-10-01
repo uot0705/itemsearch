@@ -10,9 +10,9 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-
+        <link href="{{asset('css/footer.css')}}" rel="stylesheet" />
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
-<link href="{{asset('css/footer.css')}}" rel="stylesheet" />
+
     </head>
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -41,7 +41,7 @@
        <div>
        @yield('content')
       </div>
-      
+
       <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">@Item Search</p></div>
         </footer> 
