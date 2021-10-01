@@ -7,6 +7,7 @@
 <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
 <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<title>{{$item->name}} の詳細/Item Search</title>
 </head>
     <body>
     <!-- Header-->
@@ -89,17 +90,17 @@
                        
 
                         <div class="d-flex">
-                        　@if (Auth::check()) 
+                        @if (Auth::check()) 
                                @if  ($user->id == $item->user_id)
                             <a class="btn btn-primary btn-xl" href="{{route('item.edit',['id'=>$item->id])}}">{{ __('編集') }}</a>
                             <form method="POST" action="{{route('item.destroy',['id'=>$item->id])}}">
                             @csrf
                             <button class="btn btn-secondary btn-xl ml-3" type="submit">削除</button>
-                    　　　　　</form>
+                           </form>
                                @endif
                                @else
 
-                           @endif
+                        @endif
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@
 <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
 <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<title>{{ $user_name }} さんの投稿/Item Search</title>
 </head>
         <!-- Header-->
         <header class="bg-dark py-5">
