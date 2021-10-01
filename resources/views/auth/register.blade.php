@@ -2,6 +2,12 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
+<head>
+<link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
+<link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
+<link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<title>アカウント作成 / Item Search</title>
+</head>
 <body>
     
        
@@ -9,7 +15,7 @@
     <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">新規登録</h1>
+                    <h1 class="display-4 fw-bolder">アカウント作成</h1>
                     <p class="lead fw-normal text-white-50 mb-0"></p>
                 </div>
             </div>

@@ -2,6 +2,13 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
+<head>
+<link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
+<link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
+<link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<title>ログイン / Item Search</title>
+</head>
+
 <body>
  <!-- Header-->
     <header class="bg-dark py-5">
