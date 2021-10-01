@@ -12,6 +12,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
 
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<link href="{{asset('css/footer.css')}}" rel="stylesheet" />
     </head>
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light bg-white">
