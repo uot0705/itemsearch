@@ -2,10 +2,7 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="ja">
-<head>
 
-<title>ログイン / Item Search</title>
-</head>
 
 <body>
  <!-- Header-->
