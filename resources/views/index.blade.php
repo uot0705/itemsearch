@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<title>アイテム投稿一覧/Item Search</title>
 <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet" />
 <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet" />
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
-<title>アイテム投稿一覧/Item Search</title>
 </head>
         <!-- Header-->
         <header class="bg-dark py-5">
