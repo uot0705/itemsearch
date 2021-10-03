@@ -51,7 +51,7 @@
                                     <!-- 詳細-->
                                 </div>
                             <!-- Product actions-->
-                                <div class="text-center ">
+                                <div class="text-center mb-4">
                                     <a class="btn btn-outline-dark mt-auto" href="{{ route('item.show', ['item_id'=>$item->id]) ,}}">詳細</a>
                                 </div>
                         </div>
