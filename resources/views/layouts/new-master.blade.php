@@ -12,6 +12,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('css/footer.css')}}" rel="stylesheet" />
 <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+<script type="text/javascript" src="js/footerFixed.js"></script>
 
     </head>
           <!-- Navigation-->
@@ -42,7 +43,7 @@
        @yield('content')
       </div>
 
-      <footer class="py-5 bg-dark">
+      <footer class="py-5 bg-dark" id="footer">
             <div class="container"><p class="m-0 text-center text-white">@Item Search</p></div>
         </footer> 
          
